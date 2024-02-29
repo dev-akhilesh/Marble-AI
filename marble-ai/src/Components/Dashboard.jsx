@@ -10,6 +10,7 @@ import {
     Tooltip,
     Legend,
 } from "chart.js";
+import data from '../db.json'
 
 function Dashboard() {
     ChartJS.register(
@@ -36,6 +37,10 @@ function Dashboard() {
             },
         },
         scales: {
+            x: {
+                type: 'category',
+                labels: data.dashboardData.labels,
+            },
             y: {
                 ticks: {
                     maxTicksLimit: 3,
@@ -47,30 +52,11 @@ function Dashboard() {
         },
     };
 
-    const data = {
-        labels,
-        datasets: [
-            {
-                label: "Oct 1, 2022 - Feb 21, 2024",
-                data: [18, 20, 28, 15, 19, 32, 25, 20],
-                borderColor: "#489AD2",
-                showLine: true,
-                pointRadius: 0,
-            },
-            {
-                label: "Oct 1, 2022 - Feb 21, 2024",
-                data: [18, 18, 33, 10, 27, 25, 28, 20],
-                borderColor: "#afcedb",
-                borderDash: [8, 2],
-                showLine: true,
-                pointRadius: 0,
-            },
-        ],
-    };
-
     return (
-        <div style={{ width: "786px", height: "450px" }}>
-            <Line options={options} data={data} />
+        <div className='chart' style={{ width: "100%", height: "420px" }}>
+            {data && (
+                <Line options={options} data={data.dashboardData} />
+            )}
         </div>
     );
 }
