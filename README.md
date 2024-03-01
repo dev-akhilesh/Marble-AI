@@ -54,4 +54,3 @@ To run the web application:
 
 Please refer to the documentation within the codebase for detailed explanations of implementation decisions, assumptions made, and additional instructions for running and using the web application.
 
-For any further inquiries or assistance,
