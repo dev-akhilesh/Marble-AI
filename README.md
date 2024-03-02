@@ -1,4 +1,4 @@
-# Marble-AI
+# Marble-AI (Assignment)
 
 Welcome to the Marble AI Dashboard! This project showcases a meticulously crafted dashboard page that mirrors the provided Figma design. It has visually appealing user experience, ensuring a comprehensive view of essential metrics. The goal is to utilize the provided template and integrate a comparison feature for selected metrics in two different time periods.
 
